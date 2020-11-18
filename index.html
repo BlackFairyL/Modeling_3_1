@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Затухающие колебания. Ястреба Елизавета</title>
+    <meta charset='utf-8' />
+    <style>
+        body {
+            margin-right: 2%; /* Отступ справа */
+            margin-left: 2%; /* Отступ слева */
+            background: #FFFFFF; /* Цвет фона */
+        }
+
+    </style>
+    <script src="Main.js"></script>
+
+</head>
+
+
+<body style="color: #424242; font-family: 'Roboto Light',serif; font-size: 14pt" onload="init()">
+<h1>
+    Моделирование затухающих колебаний
+</h1>
+<canvas height='600' width='600' id='canvas_id'>Обновите браузер</canvas>
+<script>
+    init();
+    draw();
+    draw_axis();
+</script>
+
+
+
+<table align="right">
+    <tr>
+        <td>
+            <b>Параметры уравнений:</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="input_k" id="input_k_label">
+                Коэффициент упругости k [H/м]
+            </label>
+        </td>
+        <td>
+            <input type="number" id="input_k" min="0.1" value="3" step="0.1" onchange="draw()" onkeyup="draw()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="input_c" id="input_c_label">
+                Коэффициент сопротивления с [кг/c]
+            </label>
+        </td>
+        <td>
+            <input type="number" id="input_c" min="0.1" value="0.5" step="0.1" onchange="draw()" onkeyup="draw()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="input_weight" id="input_weight_label">
+                Масса тела м [кг]
+            </label>
+        </td>
+        <td>
+            <input type="number" id="input_weight" min="0.1" value="0" step="0.1" onchange="draw()" onkeyup="draw()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="input_A" id="input_A_label">
+                Ампилтуда A [м]
+            </label>
+        </td>
+        <td>
+            <input type="number" id="input_A" min="0.1" value="0.5" step="0.1" onchange="draw()" onkeyup="draw()">
+        </td>
+    </tr>
+</table>
+</body>
+</html>
